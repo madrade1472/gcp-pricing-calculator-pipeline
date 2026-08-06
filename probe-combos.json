@@ -1,0 +1,82 @@
+[
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-2",
+  "albbTxt": "Service type",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Service type | Service type | Instances"
+ },
+ {
+  "tag": "DIV",
+  "al": "Units",
+  "albb": null,
+  "albbTxt": "",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "hours"
+ },
+ {
+  "tag": "DIV",
+  "al": "Time period",
+  "albb": null,
+  "albbTxt": "",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "per month"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-26",
+  "albbTxt": "Operating System / Software",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Operating System / Software | Operating System / Software | Operating System / S"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-37",
+  "albbTxt": "Machine Family",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Machine Family | Machine Family | Machine Family | General Purpose"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-40",
+  "albbTxt": "Series",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Series | Series | Series | N4"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-43",
+  "albbTxt": "Machine type",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Machine type | Machine type | Machine type | n4-standard-2"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-71",
+  "albbTxt": "Region",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Region | Region | Region | Iowa (us-central1)"
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "ucc-78",
+  "albbTxt": "Committed use discount options",
+  "cls": "rHGeGc-TkwUic",
+  "txt": "Committed use discount options | Committed use discount options | Committed use "
+ },
+ {
+  "tag": "DIV",
+  "al": null,
+  "albb": "i8",
+  "albbTxt": "‪English‬",
+  "cls": "VfPpkd-TkwUic",
+  "txt": "language | ‪English‬"
+ }
+]

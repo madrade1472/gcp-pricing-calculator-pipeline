@@ -1,0 +1,16 @@
+{
+  "titulo": "Estimativa de Custos - Ambiente PROD (exemplo)",
+  "subtitulo": "Plataforma de dados - Google Cloud",
+  "regiao": "São Paulo (southamerica-east1)",
+  "link_oficial": "",
+  "rodape": "Valores de lista (on-demand), região São Paulo. Descontos de uso comprometido (CUD 1 ou 3 anos) podem reduzir Compute e BigQuery em 20% a 55%.",
+  "servicos": [
+    { "categoria": "Compute", "servico": "Compute Engine", "detalhe": "2x n4-standard-8 (8 vCPU, 32 GiB), 730 h/mês, disco 100 GiB", "qtd": 2, "unidade": "instância/mês", "preco": 216.62 },
+    { "categoria": "Compute", "servico": "Cloud Run", "detalhe": "APIs serverless, 2 vCPU / 4 GiB, ~200 h/mês ativas", "qtd": 200, "unidade": "hora", "preco": 0.19 },
+    { "categoria": "Storage", "servico": "Cloud Storage", "detalhe": "Data lake, 10 TiB Standard, região SP", "qtd": 10240, "unidade": "GiB/mês", "preco": 0.035 },
+    { "categoria": "Data Analytics", "servico": "BigQuery Editions", "detalhe": "100 slots baseline (Enterprise), autoscale médio 50%", "qtd": 1, "unidade": "mês", "preco": 8909.31 },
+    { "categoria": "Data Analytics", "servico": "BigQuery Storage", "detalhe": "20 TiB de armazenamento lógico ativo", "qtd": 20, "unidade": "TiB/mês", "preco": 19.36 },
+    { "categoria": "Management", "servico": "Cloud Logging", "detalhe": "Ingestão de logs acima da cota gratuita", "qtd": 100, "unidade": "GiB/mês", "preco": 0.5 },
+    { "categoria": "Management", "servico": "Cloud Monitoring", "detalhe": "Métricas customizadas acima da cota gratuita", "qtd": 50, "unidade": "MiB/mês", "preco": 0.258 }
+  ]
+}

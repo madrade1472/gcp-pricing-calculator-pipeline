@@ -1,0 +1,65 @@
+{
+ "inputs": [
+  {
+   "label": "Baseline slots info",
+   "type": "number",
+   "value": "100"
+  },
+  {
+   "label": "Slot commitments* info",
+   "type": "number",
+   "value": "100"
+  },
+  {
+   "label": "Average utilization of autoscale slots info",
+   "type": "number",
+   "value": "50"
+  },
+  {
+   "label": "Active logical storage info",
+   "type": "number",
+   "value": "20"
+  },
+  {
+   "label": "Rename Instances",
+   "type": "textarea",
+   "value": "Instances"
+  },
+  {
+   "label": "Rename Editions",
+   "type": "textarea",
+   "value": "Editions"
+  },
+  {
+   "label": "Rename Cloud Storage",
+   "type": "textarea",
+   "value": "Cloud Storage"
+  }
+ ],
+ "selects": [
+  {
+   "label": "Service type",
+   "text": "Service type Service type Editions"
+  },
+  {
+   "label": "Location type",
+   "text": "Location type Location type Location type Region"
+  },
+  {
+   "label": "Location",
+   "text": "Location Location Location Iowa (us-central1)"
+  },
+  {
+   "label": "Maximum slots",
+   "text": "Maximum slots Maximum slots Maximum slots Medium (200 slots)"
+  },
+  {
+   "label": "Unit",
+   "text": "TiB"
+  },
+  {
+   "label": "‪English‬",
+   "text": "language ‪English‬"
+  }
+ ]
+}

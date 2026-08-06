@@ -1,0 +1,95 @@
+{
+ "inputs": [
+  {
+   "label": "Number of instances*",
+   "type": "number",
+   "value": "1",
+   "ph": ""
+  },
+  {
+   "label": "Total instance usage time*",
+   "type": "number",
+   "value": "730",
+   "ph": ""
+  },
+  {
+   "label": "Number of vCPUs",
+   "type": "range",
+   "value": "0",
+   "ph": ""
+  },
+  {
+   "label": "Number of vCPUs",
+   "type": "number",
+   "value": "2",
+   "ph": ""
+  },
+  {
+   "label": "Amount of memory",
+   "type": "range",
+   "value": "80",
+   "ph": ""
+  },
+  {
+   "label": "Amount of memory",
+   "type": "number",
+   "value": "8",
+   "ph": ""
+  },
+  {
+   "label": "Boot disk size (GiB)\ninfo",
+   "type": "number",
+   "value": "10",
+   "ph": ""
+  },
+  {
+   "label": "Rename Instances",
+   "type": "textarea",
+   "value": "Instances",
+   "ph": ""
+  }
+ ],
+ "selects": [
+  {
+   "label": "Service type",
+   "text": "Service type Service type Instances"
+  },
+  {
+   "label": "Units",
+   "text": "hours"
+  },
+  {
+   "label": "Time period",
+   "text": "per month"
+  },
+  {
+   "label": "Operating System / Software",
+   "text": "Operating System / Software Operating System / Software Operating System / Software Free: Debian, CentOS, CoreOS, Ubuntu or BYOL (Bring Your Own License)"
+  },
+  {
+   "label": "Machine Family",
+   "text": "Machine Family Machine Family Machine Family General Purpose"
+  },
+  {
+   "label": "Series",
+   "text": "Series Series Series N4"
+  },
+  {
+   "label": "Machine type",
+   "text": "Machine type Machine type Machine type n4-standard-2"
+  },
+  {
+   "label": "Region",
+   "text": "Region Region Region Iowa (us-central1)"
+  },
+  {
+   "label": "Committed use discount options",
+   "text": "Committed use discount options Committed use discount options Committed use discount options None"
+  },
+  {
+   "label": "‪English‬",
+   "text": "language ‪English‬"
+  }
+ ],
+ "checks": []
+}
