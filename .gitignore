@@ -1,0 +1,11 @@
+node_modules/
+
+# saídas de execução: podem conter dimensionamento e custos de casos reais
+*-result.json
+*-summary.txt
+*-summary.png
+*.log
+
+# capturas de tela das sondas
+probe-*.png
+*-preview.png

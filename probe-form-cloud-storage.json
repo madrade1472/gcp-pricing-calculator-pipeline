@@ -1,0 +1,58 @@
+{
+ "inputs": [
+  {
+   "label": "Total amount of storage* info",
+   "type": "number",
+   "value": "5000"
+  },
+  {
+   "label": "Data Transfer within Google Cloud info",
+   "type": "number",
+   "value": ""
+  },
+  {
+   "label": "Rename Instances",
+   "type": "textarea",
+   "value": "Instances"
+  },
+  {
+   "label": "Rename Cloud Storage",
+   "type": "textarea",
+   "value": "Cloud Storage"
+  }
+ ],
+ "selects": [
+  {
+   "label": "Location type",
+   "text": "Location type Location type Location type Region"
+  },
+  {
+   "label": "Location",
+   "text": "Location Location Location Iowa (us-central1)"
+  },
+  {
+   "label": "Storage class",
+   "text": "Storage class Storage class Storage class Standard Storage"
+  },
+  {
+   "label": "Unit",
+   "text": "GiB"
+  },
+  {
+   "label": "Unit",
+   "text": "GiB"
+  },
+  {
+   "label": "Source region",
+   "text": "Source region Source region Source region North America"
+  },
+  {
+   "label": "Destination region",
+   "text": "Destination region Destination region Destination region North America"
+  },
+  {
+   "label": "‪English‬",
+   "text": "language ‪English‬"
+  }
+ ]
+}

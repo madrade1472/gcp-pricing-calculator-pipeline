@@ -1,0 +1,17 @@
+{
+  "name": "gcp-pricing-calculator-pipeline",
+  "version": "1.0.0",
+  "description": "Gera estimativas reais e compartilháveis no Google Cloud Pricing Calculator dirigindo a UI oficial com Playwright",
+  "type": "module",
+  "scripts": {
+    "exemplo": "node build_exemplo.mjs",
+    "avancado": "node build_avancado.mjs",
+    "discover": "node discover_forms.mjs",
+    "catalogo": "node list_catalogo.mjs"
+  },
+  "keywords": ["gcp", "google-cloud", "pricing", "calculator", "playwright", "cost-estimation"],
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.61.0"
+  }
+}

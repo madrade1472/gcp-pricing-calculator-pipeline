@@ -1,0 +1,157 @@
+{
+ "cabecalhos": [
+  "Gemini Models",
+  "Gemini Models configuration",
+  "Gemini 3.5 Flash",
+  "Gemini 3.1 Pro",
+  "Gemini 3.1 Flash-Lite",
+  "Gemini 2.5 Pro",
+  "Gemini 2.5 Flash",
+  "Gemini 2.5 Flash Lite",
+  "Gemini 2.5 Flash Live",
+  "Gemini 2.5 Pro Thinking",
+  "Gemini 2.5 Flash Thinking"
+ ],
+ "blocos": [
+  {
+   "indice": 0,
+   "modelo": "Gemini 3.5 Flash",
+   "y": 645,
+   "campos": [
+    "Requests per day info",
+    "Average input characters (Global) info",
+    "Average input characters (Regional) info",
+    "Average input images (Global) info",
+    "Average input images (Regional) info",
+    "Average input video (seconds) (Global) info",
+    "Average input video (seconds) (Regional) info",
+    "Average input audio (seconds) (Global) info",
+    "Average input audio (seconds) (Regional) info",
+    "Average output characters (Global) info",
+    "Average output characters (Regional) info",
+    "Grounding with Google Search",
+    "Web Grounding with Enterprise",
+    "Grounding with Data",
+    "Grounding with Google Map"
+   ]
+  },
+  {
+   "indice": 1,
+   "modelo": "Gemini 3.1 Pro",
+   "y": 2364,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Grounding with Google Search info",
+    "Web Grounding with Enterprise info",
+    "Grounding with Data info",
+    "Grounding with Google Map info"
+   ]
+  },
+  {
+   "indice": 2,
+   "modelo": "Gemini 3.1 Flash-Lite",
+   "y": 3635,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Grounding with Google Search info",
+    "Web Grounding with Enterprise info",
+    "Grounding with Data info",
+    "Grounding with Google Map info"
+   ]
+  },
+  {
+   "indice": 3,
+   "modelo": "Gemini 2.5 Pro",
+   "y": 4994,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Grounding with Google Search info",
+    "Web Grounding with Enterprise info",
+    "Grounding with Data info",
+    "Grounding with Google Map info"
+   ]
+  },
+  {
+   "indice": 4,
+   "modelo": "Gemini 2.5 Flash",
+   "y": 6265,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Average output tokens for image info",
+    "Grounding with Google Search info",
+    "Web Grounding with Enterprise info",
+    "Grounding with Data info",
+    "Grounding with Google Map info"
+   ]
+  },
+  {
+   "indice": 5,
+   "modelo": "Gemini 2.5 Flash Lite",
+   "y": 7641,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Grounding with Google Search info",
+    "Web Grounding with Enterprise info",
+    "Grounding with Data info",
+    "Grounding with Google Map info"
+   ]
+  },
+  {
+   "indice": 6,
+   "modelo": "Gemini 2.5 Flash Live",
+   "y": 8763,
+   "campos": [
+    "Requests per day info",
+    "Average input tokens for text info",
+    "Average input tokens for image info",
+    "Average input tokens for video info",
+    "Average input tokens for audio info",
+    "Average output tokens for text (response and reasoning) info",
+    "Average output tokens for audio info"
+   ]
+  },
+  {
+   "indice": 7,
+   "modelo": "Gemini 2.5 Pro Thinking",
+   "y": 9807,
+   "campos": [
+    "Requests per day info",
+    "Average output tokens for text (response and reasoning) info"
+   ]
+  },
+  {
+   "indice": 8,
+   "modelo": "Gemini 2.5 Flash Thinking",
+   "y": 10235,
+   "campos": [
+    "Requests per day info",
+    "Average output tokens per request info"
+   ]
+  }
+ ]
+}

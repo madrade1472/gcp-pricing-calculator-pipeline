@@ -1,0 +1,74 @@
+[
+ {
+  "type": "number",
+  "id": "c22",
+  "name": "",
+  "value": "1",
+  "al": null,
+  "albb": "ucc-6",
+  "albbTxt": "Number of instances*",
+  "labelFor": "",
+  "closest": "",
+  "cls": "qdOxv-fmcmS-wGMbrd QCvrGb"
+ },
+ {
+  "type": "number",
+  "id": "c23",
+  "name": "",
+  "value": "730",
+  "al": null,
+  "albb": "ucc-9",
+  "albbTxt": "Total instance usage time*",
+  "labelFor": "",
+  "closest": "",
+  "cls": "qdOxv-fmcmS-wGMbrd QCvrGb"
+ },
+ {
+  "type": "number",
+  "id": "c26",
+  "name": "",
+  "value": "2",
+  "al": null,
+  "albb": "ucc-45",
+  "albbTxt": "Number of vCPUs",
+  "labelFor": "",
+  "closest": "",
+  "cls": "qdOxv-fmcmS-wGMbrd QCvrGb CNaLNe"
+ },
+ {
+  "type": "number",
+  "id": "c27",
+  "name": "",
+  "value": "8",
+  "al": null,
+  "albb": "ucc-48",
+  "albbTxt": "Amount of memory",
+  "labelFor": "",
+  "closest": "",
+  "cls": "qdOxv-fmcmS-wGMbrd QCvrGb CNaLNe"
+ },
+ {
+  "type": "number",
+  "id": "c29",
+  "name": "",
+  "value": "10",
+  "al": null,
+  "albb": "ucc-60",
+  "albbTxt": "Boot disk size (GiB) info",
+  "labelFor": "",
+  "closest": "",
+  "cls": "qdOxv-fmcmS-wGMbrd QCvrGb"
+ },
+ {
+  "type": "textarea",
+  "id": "",
+  "name": "",
+  "value": "Instances",
+  "al": "Rename Instances",
+  "albb": null,
+  "albbTxt": "",
+  "labelFor": "",
+  "closest": "",
+  "cls": "zv7tnb rGbpAb"
+ }
+]

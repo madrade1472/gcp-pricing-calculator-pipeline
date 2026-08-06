@@ -1,0 +1,1148 @@
+{
+ "Compute Engine": {
+  "campos": [
+   {
+    "rotulo": "Number of instances*",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Total instance usage time*",
+    "tipo": "number",
+    "padrao": "730"
+   },
+   {
+    "rotulo": "Number of vCPUs",
+    "tipo": "number",
+    "padrao": "2"
+   },
+   {
+    "rotulo": "Amount of memory",
+    "tipo": "number",
+    "padrao": "8"
+   },
+   {
+    "rotulo": "Boot disk size (GiB) info",
+    "tipo": "number",
+    "padrao": "10"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Instances"
+   },
+   {
+    "rotulo": "Units",
+    "atual": "hours"
+   },
+   {
+    "rotulo": "Time period",
+    "atual": "per month"
+   },
+   {
+    "rotulo": "Operating System / Software",
+    "atual": "Free: Debian, CentOS, CoreOS, Ubuntu or BYOL (Bring Your Own License)"
+   },
+   {
+    "rotulo": "Machine Family",
+    "atual": "General Purpose"
+   },
+   {
+    "rotulo": "Series",
+    "atual": "N4"
+   },
+   {
+    "rotulo": "Machine type",
+    "atual": "n4-standard-2"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Cloud Storage": {
+  "campos": [
+   {
+    "rotulo": "Total amount of storage* info",
+    "tipo": "number",
+    "padrao": "5000"
+   },
+   {
+    "rotulo": "Data Transfer within Google Cloud info",
+    "tipo": "number",
+    "padrao": ""
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Location type",
+    "atual": "Region"
+   },
+   {
+    "rotulo": "Location",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Storage class",
+    "atual": "Standard Storage"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Source region",
+    "atual": "North America"
+   },
+   {
+    "rotulo": "Destination region",
+    "atual": "North America"
+   }
+  ]
+ },
+ "BigQuery": {
+  "campos": [
+   {
+    "rotulo": "Baseline slots info",
+    "tipo": "number",
+    "padrao": "100"
+   },
+   {
+    "rotulo": "Slot commitments* info",
+    "tipo": "number",
+    "padrao": "100"
+   },
+   {
+    "rotulo": "Average utilization of autoscale slots info",
+    "tipo": "number",
+    "padrao": "50"
+   },
+   {
+    "rotulo": "Active logical storage info",
+    "tipo": "number",
+    "padrao": "20"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Editions"
+   },
+   {
+    "rotulo": "Location type",
+    "atual": "Region"
+   },
+   {
+    "rotulo": "Location",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Maximum slots",
+    "atual": "Medium (200 slots)"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "TiB"
+   }
+  ]
+ },
+ "Cloud Run": {
+  "campos": [],
+  "dropdowns": [
+   {
+    "rotulo": "Use case",
+    "atual": "Public API / Website: External application data access"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "europe-west1 (Belgium) - Tier 1 - GPU Supported"
+   },
+   {
+    "rotulo": "Number of requests per month",
+    "atual": "10 million"
+   },
+   {
+    "rotulo": "Committed use discounts",
+    "atual": "None"
+   }
+  ]
+ },
+ "Cloud SQL": {
+  "campos": [
+   {
+    "rotulo": "Number of instances*",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Total instance usage time*",
+    "tipo": "number",
+    "padrao": "730"
+   },
+   {
+    "rotulo": "Number of vCPUs",
+    "tipo": "number",
+    "padrao": "2"
+   },
+   {
+    "rotulo": "Amount of memory",
+    "tipo": "number",
+    "padrao": "7.5"
+   },
+   {
+    "rotulo": "Storage (Provisioned Amount)* info",
+    "tipo": "number",
+    "padrao": "100"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "MySQL"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Units",
+    "atual": "hours"
+   },
+   {
+    "rotulo": "Time period",
+    "atual": "per month"
+   },
+   {
+    "rotulo": "Cloud SQL machine",
+    "atual": "General purpose"
+   },
+   {
+    "rotulo": "SQL instance type",
+    "atual": "db-standard-2"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Google Kubernetes Engine": {
+  "campos": [
+   {
+    "rotulo": "Number of nodes*",
+    "tipo": "number",
+    "padrao": "5"
+   },
+   {
+    "rotulo": "Total node usage time*",
+    "tipo": "number",
+    "padrao": "3650"
+   },
+   {
+    "rotulo": "Number of Zonal clusters info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Number of Regional clusters info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Number of vCPUs",
+    "tipo": "number",
+    "padrao": "16"
+   },
+   {
+    "rotulo": "Amount of memory",
+    "tipo": "number",
+    "padrao": "60"
+   },
+   {
+    "rotulo": "Boot disk size (GiB) info",
+    "tipo": "number",
+    "padrao": "10"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "GKE"
+   },
+   {
+    "rotulo": "Units",
+    "atual": "hours"
+   },
+   {
+    "rotulo": "Time period",
+    "atual": "per month"
+   },
+   {
+    "rotulo": "Operating System / Software",
+    "atual": "Free: Container-optimized"
+   },
+   {
+    "rotulo": "Machine Family",
+    "atual": "General Purpose"
+   },
+   {
+    "rotulo": "Series",
+    "atual": "N1"
+   },
+   {
+    "rotulo": "Machine type",
+    "atual": "n1-standard-16"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Dataflow": {
+  "campos": [
+   {
+    "rotulo": "Number of job run hours info",
+    "tipo": "number",
+    "padrao": "730"
+   },
+   {
+    "rotulo": "Number of worker nodes* info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Streaming Engine Compute Units info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Streaming Engine data processed (legacy) info",
+    "tipo": "number",
+    "padrao": "100"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Dataflow Classic"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Job Type",
+    "atual": "Streaming"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Hours"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Dataproc": {
+  "campos": [
+   {
+    "rotulo": "Usage time",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Number of vCPUs info",
+    "tipo": "number",
+    "padrao": "4"
+   },
+   {
+    "rotulo": "Memory per vCPU (GiB) info",
+    "tipo": "number",
+    "padrao": "16"
+   },
+   {
+    "rotulo": "Shuffle Storage (GiB) per vCPU info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Current cluster utilization %*",
+    "tipo": "number",
+    "padrao": "50"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Dataproc Serverless for Spark"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Hours"
+   },
+   {
+    "rotulo": "Period",
+    "atual": "Day"
+   }
+  ]
+ },
+ "Pub/Sub": {
+  "campos": [
+   {
+    "rotulo": "Amount of published data daily* info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Topic retention days info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Number of subscriptions info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Number of subscriptions with retained acknowledged messages info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Average retention window days info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Number of snapshots used per month info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Average retention window days info",
+    "tipo": "number",
+    "padrao": ""
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   }
+  ]
+ },
+ "Agent Platform GenAI Models": {
+  "campos": [
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   },
+   {
+    "rotulo": "Requests per day info",
+    "tipo": "number",
+    "padrao": "0"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Imagen Models"
+   }
+  ]
+ },
+ "Prediction": {
+  "campos": [
+   {
+    "rotulo": "Number of models to serve info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Average hours per month each node is running* info",
+    "tipo": "number",
+    "padrao": "100"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Region",
+    "atual": "South Carolina (us-east1)"
+   },
+   {
+    "rotulo": "Accelerator Type",
+    "atual": "TPU"
+   },
+   {
+    "rotulo": "Accelerator",
+    "atual": "TPU V5e"
+   },
+   {
+    "rotulo": "Tpu Machine Type",
+    "atual": "ct5lp-hightpu-1t"
+   },
+   {
+    "rotulo": "Number of tpu cores",
+    "atual": "1"
+   }
+  ]
+ },
+ "Managed Service for Apache Airflow": {
+  "campos": [
+   {
+    "rotulo": "Average hours each server runs (per month)",
+    "tipo": "number",
+    "padrao": "730"
+   },
+   {
+    "rotulo": "Number of Airflow Schedulers info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Memory per Airflow Scheduler (GiB) info",
+    "tipo": "number",
+    "padrao": "1.875"
+   },
+   {
+    "rotulo": "Storage per Airflow Scheduler (GiB) info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Average number of Airflow Workers info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Memory per Airflow Worker (GiB) info",
+    "tipo": "number",
+    "padrao": "1.875"
+   },
+   {
+    "rotulo": "Storage per Airflow Worker (GiB) info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Memory per Airflow Web Server (GiB) info",
+    "tipo": "number",
+    "padrao": "1.875"
+   },
+   {
+    "rotulo": "Storage per Airflow Web Server (GiB) info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Number of Airflow Triggerers info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Memory per Airflow Triggerer (GiB) info",
+    "tipo": "number",
+    "padrao": "1.875"
+   },
+   {
+    "rotulo": "Storage per Airflow Triggerer (GiB) info",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Airflow database storage (GiB) info",
+    "tipo": "number",
+    "padrao": "1"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Managed Airflow (Gen 2)"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "1000 mCPU per Airflow Scheduler",
+    "atual": "0.5"
+   },
+   {
+    "rotulo": "1000 mCPU per Airflow Worker",
+    "atual": "0.5"
+   },
+   {
+    "rotulo": "1000 mCPU per Airflow Web Server",
+    "atual": "0.5"
+   },
+   {
+    "rotulo": "1000 mCPU per Airflow Triggerer",
+    "atual": "0.5"
+   }
+  ]
+ },
+ "Cloud Operations": {
+  "campos": [
+   {
+    "rotulo": "Logging storage amount* info",
+    "tipo": "number",
+    "padrao": "100"
+   },
+   {
+    "rotulo": "Logging retention duration info",
+    "tipo": "number",
+    "padrao": "2"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Cloud Logging"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Months"
+   }
+  ]
+ },
+ "Cloud Memorystore": {
+  "campos": [
+   {
+    "rotulo": "Number of shards* info",
+    "tipo": "number",
+    "padrao": "3"
+   },
+   {
+    "rotulo": "Average hours per month* info",
+    "tipo": "number",
+    "padrao": "730"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Memorystore for Redis Cluster"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Node Type",
+    "atual": "Highmem-Medium (13 GB)"
+   },
+   {
+    "rotulo": "Number of replicas per shard",
+    "atual": "1"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Networking": {
+  "campos": [
+   {
+    "rotulo": "Static IP addresses (assigned but unused) info",
+    "tipo": "number",
+    "padrao": "20"
+   },
+   {
+    "rotulo": "Number of IP addresses in use on standard VM instances info",
+    "tipo": "number",
+    "padrao": "50"
+   },
+   {
+    "rotulo": "Number of IP addresses in use on Spot VM instances info",
+    "tipo": "number",
+    "padrao": "0"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "IP Address"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   }
+  ]
+ },
+ "Hyperdisk and Persistent Disk": {
+  "campos": [
+   {
+    "rotulo": "Total Disks",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "IOPS info",
+    "tipo": "number",
+    "padrao": "3000"
+   },
+   {
+    "rotulo": "Throughput (MiB/s) info",
+    "tipo": "number",
+    "padrao": "140"
+   },
+   {
+    "rotulo": "Total Disks",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Throughput (MiB/s)",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Total Disks",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "IOPS",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Total Disks",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": "200"
+   },
+   {
+    "rotulo": "Throughput (MiB/s)",
+    "tipo": "number",
+    "padrao": "10"
+   },
+   {
+    "rotulo": "Total Disks",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "IOPS",
+    "tipo": "number",
+    "padrao": "100000"
+   },
+   {
+    "rotulo": "Throughput (MiB/s)",
+    "tipo": "number",
+    "padrao": "10"
+   },
+   {
+    "rotulo": "Capacity",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Throughput (MiB/s)",
+    "tipo": "number",
+    "padrao": "10"
+   },
+   {
+    "rotulo": "IOPS",
+    "tipo": "number",
+    "padrao": "100000"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Service type",
+    "atual": "Hyperdisk"
+   },
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Disk type",
+    "atual": "Hyperdisk Balanced"
+   },
+   {
+    "rotulo": "Capacity type",
+    "atual": "Advanced"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Performance type",
+    "atual": "Advanced"
+   }
+  ]
+ },
+ "Cloud Spanner": {
+  "campos": [
+   {
+    "rotulo": "Number of nodes info",
+    "tipo": "number",
+    "padrao": "2"
+   },
+   {
+    "rotulo": "SSD Storage amount info",
+    "tipo": "number",
+    "padrao": "500"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Edition",
+    "atual": "Standard"
+   },
+   {
+    "rotulo": "Configuration",
+    "atual": "Regional"
+   },
+   {
+    "rotulo": "Location",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Compute capacity unit",
+    "atual": "Nodes"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Committed use discounts",
+    "atual": "None"
+   }
+  ]
+ },
+ "AlloyDB": {
+  "campos": [
+   {
+    "rotulo": "Storage amount* info",
+    "tipo": "number",
+    "padrao": "10"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Machine series",
+    "atual": "C4A - Google Axion ARM - Best price-performance"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Bigtable": {
+  "campos": [
+   {
+    "rotulo": "Number of nodes",
+    "tipo": "number",
+    "padrao": "1"
+   },
+   {
+    "rotulo": "Total node usage time",
+    "tipo": "number",
+    "padrao": "730"
+   },
+   {
+    "rotulo": "Storage amount info",
+    "tipo": "number",
+    "padrao": "5"
+   },
+   {
+    "rotulo": "Backup amount info",
+    "tipo": "number",
+    "padrao": "0"
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Region",
+    "atual": "Iowa (us-central1)"
+   },
+   {
+    "rotulo": "Units",
+    "atual": "hours"
+   },
+   {
+    "rotulo": "Time period",
+    "atual": "per month"
+   },
+   {
+    "rotulo": "Storage type",
+    "atual": "SSD"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "TiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "TiB"
+   },
+   {
+    "rotulo": "Committed use discount options",
+    "atual": "None"
+   }
+  ]
+ },
+ "Cloud Vision": {
+  "campos": [
+   {
+    "rotulo": "Label Detection info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Text Detection info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Landmark Detection info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Logo Detection info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Image Properties info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Object Localization info",
+    "tipo": "number",
+    "padrao": ""
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "Thousand"
+   }
+  ]
+ },
+ "Artifact Registry": {
+  "campos": [
+   {
+    "rotulo": "Storage info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Amount of data (outside of free traffic) info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Amount of data info",
+    "tipo": "number",
+    "padrao": ""
+   }
+  ],
+  "dropdowns": [
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Transfer source and destination",
+    "atual": "Transfer source and destination"
+   },
+   {
+    "rotulo": "Unit",
+    "atual": "GiB"
+   },
+   {
+    "rotulo": "Repository continent",
+    "atual": "Repository continent"
+   }
+  ]
+ },
+ "Secret Manager": {
+  "campos": [
+   {
+    "rotulo": "Active secret versions (across all locations) info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Access operations info",
+    "tipo": "number",
+    "padrao": ""
+   },
+   {
+    "rotulo": "Rotation notifications info",
+    "tipo": "number",
+    "padrao": ""
+   }
+  ],
+  "dropdowns": []
+ }
+}
