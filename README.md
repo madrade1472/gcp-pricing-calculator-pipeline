@@ -8,12 +8,13 @@ Não é um simulador de preços nem uma reimplementação da tabela do Google. O
 calculator, então ele acompanha as mudanças de tarifa sem que você mantenha nada.
 
 ```
-proposta / planilha de dimensionamento
+proposta comercial (.docx, planilha, escopo técnico)
         │
-        ▼
-  build_<caso>.mjs        você descreve os serviços e volumes
+        ▼   ← CABEÇA: ler o documento, derivar volumes, escolher produtos,
+        │            traduzir nome comercial -> nome de catálogo, escrever o filler
+  build_<caso>.mjs        a descrição da estimativa, em código
         │
-        ▼
+        ▼   ← BRAÇO: daqui para baixo é determinístico
   gcp_lib.mjs             dirige a UI: catálogo, campos, dropdowns, região
         │
         ▼
@@ -22,6 +23,32 @@ proposta / planilha de dimensionamento
         ▼
   probe_gcp8.mjs          reabre o link e confere o que ficou salvo
 ```
+
+## Este repositório é o braço, não a cabeça
+
+Vale dizer isso logo, porque muda o que você espera daqui.
+
+O que está neste repositório é **execução determinística**: dirigir a interface, preencher campo
+por campo, contornar as armadilhas, gerar a URL e auditar o que ficou salvo. Isso roda com Node e
+Playwright, sem IA nenhuma.
+
+Só que um repositório vazio não estima coisa alguma. Para um caso novo, **alguém precisa escrever
+o `build_<caso>.mjs`**, e é aí que está o trabalho de verdade:
+
+- ler a proposta e derivar a volumetria — capturas por dia, tokens por chamada, GiB por mês;
+- decidir quais produtos entram, e quais não têm equivalente no catálogo e precisam ficar de fora;
+- traduzir nome comercial para nome de catálogo — Cloud Composer é `Managed Service for Apache
+  Airflow`, Vertex AI generativo é `Agent Platform GenAI Models`;
+- descobrir os rótulos reais dos campos daquele produto, rodando as sondas;
+- montar o filler na ordem que não quebra, e justificar cada premissa que não veio do documento.
+
+Esse trabalho é de interpretação, não de automação. Na prática, em todos os casos reais, quem fez
+foi um agente de IA lendo o documento — o projeto nasceu assim. Um humano consegue fazer o mesmo,
+lendo o [QUIRKS.md](QUIRKS.md) e as sondas, mas é laborioso e é exatamente onde os erros aparecem.
+
+Resumindo: **rodar um build pronto não precisa de IA; produzir um build para uma proposta nova
+precisa de alguém — ou algo — que entenda a proposta.** O [CLAUDE.md](CLAUDE.md) traz as instruções
+para um agente conduzir esse processo de ponta a ponta.
 
 ## O link é anônimo, e é a própria URL
 
@@ -50,7 +77,8 @@ npx playwright install chromium
 ```
 
 Node 18+. Nenhuma credencial, nenhuma conta Google, nenhuma API key — o pipeline usa a página
-pública.
+pública. Isso vale para **executar** um build; para escrever um build novo a partir de uma
+proposta, veja "Este repositório é o braço, não a cabeça", acima.
 
 ## Uso
 
