@@ -7,6 +7,12 @@ correta no Google Cloud Pricing Calculator.
 O código deste repositório executa. Quem interpreta o documento e escreve o `build_<caso>.mjs`
 é você.
 
+## Como é acionado
+
+Pelo comando `/calc_gcp` (em `.claude/commands/`) ou por um pedido em linguagem natural como
+"monta a calculadora GCP dessa proposta". O comando é só o gatilho e não leva argumento de
+cliente: o usuário aponta o documento. Ver `docs/USO_COM_CLAUDE_CODE.md`.
+
 ## O que você recebe e o que precisa entregar
 
 **Recebe:** um documento de proposta, escopo técnico ou planilha de dimensionamento, apontado por

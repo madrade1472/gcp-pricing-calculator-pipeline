@@ -38,6 +38,13 @@ bem mais: uma `n4-standard-2` vai de US$ 67,01 para US$ 106,41.
 "Committed use discount options" fica em `None`. Se a sua estimativa assume compromisso de 1 ou
 3 anos, defina explicitamente — muda o total entre 20% e 55%.
 
+### A região pode voltar ao padrão com o build logando a certa
+
+Cloud Run já foi salvo em `europe-west1 (Belgium)` e Memorystore em `Iowa (us-central1)`, os dois
+pedidos em us-east4, com o log mostrando a região correta. O mesmo vale para o tipo de boot disk
+(`balanced-persistent-disk`, `ssd-persistent-disk`). Só a auditoria pegou. Quando a estimativa
+tiver muitos serviços, planeje um passe final de correção de região sobre o link pronto.
+
 ## As que fazem o seletor mentir
 
 ### Os campos não têm `aria-label`
@@ -111,6 +118,125 @@ A região padrão dele também é `europe-west1 (Belgium)`, não `us-central1`.
   inválido, e ele entra na estimativa custando US$ 0 enquanto o total continua plausível. Suba o
   dropdown `1000 mCPU per Airflow <componente>` para 1 antes de preencher a memória.
 
+### Cloud Run: o volume reverte para 10 milhões mesmo com `Custom`
+
+Não é o caso do use case acima. Com `Custom` aplicado, o `setSelect` relê "100,000" e loga
+sucesso; o filler pode reafirmar o volume três vezes seguidas, todas confirmadas, e a estimativa
+salva continua com 10 milhões. A reversão não acontece no filler, e sim adiante, quando os
+produtos seguintes são adicionados. O que funciona é **um passe final sobre a estimativa já
+montada**, percorrendo os botões `Edit` e reaplicando o volume. Só a auditoria do link pega isso.
+
+### Não dá para saber qual serviço está aberto no painel de `Edit`
+
+Os campos "Rename" de todos os serviços coexistem no DOM e todos passam no teste de visibilidade;
+o rename mais próximo do painel na vertical pode ser de outro serviço, e o ancestral do painel não
+contém rename nenhum. A ordem dos botões `Edit` também não é a ordem de adição. Para corrigir
+vários serviços do mesmo produto, identifique o painel pelo conteúdo dele (a presença de um campo
+específico) ou **aplique o mesmo valor a todos**, para que a identificação deixe de importar.
+
+### Cloud Run não tem campo de vCPU nem de memória
+
+Nem com `Custom`. Os radios `service` / `job` / `worker_pool` / `instance` só trocam o dropdown de
+volume (`Number of requests per month`, ou `Number of executions per month` com
+`Execution time per task`); `worker_pool` dá um valor fixo de cerca de US$ 31. Nenhum aceita
+vCPU-hora, então um contêiner sempre ligado (o equivalente a Fargate ou App Runner) não se
+espelha pelo calculator. Declare a diferença por fora, a preço de lista.
+
+### Compute Engine: instâncias e tempo de uso são acoplados
+
+`Total instance usage time` é o total **somado** de todas as instâncias, não por VM. Subir as
+instâncias para 2 faz o calculator reescrever o tempo para 1460 sozinho. Preencher os dois cria um
+cabo de guerra: o filler ajusta o tempo para 730, o calculator derruba as instâncias para 1, e o
+item sai pela metade do preço. **Preencha só `Number of instances`.**
+
+### Compute Engine: Spot é radio sem nome, e o clique no pai não marca
+
+O modelo de provisionamento (`value="regular"` / `value="spot"`) é `input[type=radio]` sem nome
+acessível; não existe combobox "Provisioning model". Clicar no elemento pai do input loga
+"clicado", o radio continua desmarcado e o nó entra a preço regular, sem erro. O que marca é
+clicar no **texto visível**:
+
+```js
+await page.getByText(/^Spot \(Preemptible VM\)/).first().click();
+// sempre reler depois
+await page.locator('input[value="spot"]').first().isChecked();
+```
+
+Uma `n2-highmem-8` em us-east4 cai de US$ 431,93 para US$ 109,34.
+
+### Preço de Spot não acompanha o on-demand entre regiões
+
+Para `n2-highmem-8`, 10 nós on-demand custam US$ 6.671/mês em São Paulo e US$ 4.420 em us-east1,
+como esperado. Mas o nó **spot** custa US$ 188,67/mês em São Paulo contra US$ 288,89 em us-east1:
+28% do on-demand lá e 65% aqui. Um cenário com muito spot pode sair **mais barato em São Paulo**,
+ao contrário de todo o resto. Não assuma que us-east1 é sempre mais barato; meça. E como preço
+spot varia, confira contra a tabela publicada antes de fechar.
+
+### `Prediction` sem acelerador abre uma cascata de três dropdowns
+
+Com `Accelerator Type = No accelerator` aparecem `Machine Family` → `Series` → `Machine type`,
+todos vazios. As opções de cada nível só carregam depois que o pai é escolhido. Pedir
+`Machine type` direto acha o combobox, não acha opção nenhuma, e o item entra custando US$ 0,00
+sem erro fatal. Percorra os três na ordem.
+
+### BigQuery Editions: três jeitos de invalidar o item em silêncio
+
+- **`Slot commitments` é QUANTIDADE de slots, não prazo**, e precisa ser maior ou igual a
+  `Baseline slots`. O asterisco faz parecer o campo de compromisso de 1 ou 3 anos. Preencher 0
+  achando que é "sem compromisso" faz o item custar `?`, e o **total da estimativa inteira** vira
+  `?` junto. A partir daí todo delta por serviço é lido como zero.
+- **`Maximum slots` menor que `Baseline slots` zera o item.** O dropdown vem em
+  `Medium (200 slots)`. Com baseline de 500 o serviço some da quebra de custos, o delta dele é
+  US$ 0,00 e o total continua plausível; aqui o total **não** vira `?`, então a checagem de total
+  inválido não pega. Opções: Small (100), Medium (200), Large (400), XL (800), 2XL (1600),
+  3XL (3200), 4XL (6400) e `Specify a custom amount`. Escolha a faixa acima do baseline antes dos
+  números, e ancore o regex (`/^XL \(800 slots\)/`): `/XL/` solto casa 2XL, 3XL e 4XL. Num caso
+  real, esse erro deixou a estimativa em US$ 32.923/mês em vez de US$ 87.926.
+- **Edição e prazo de compromisso são radios sem nome**, fora de `forms_gcp.json`: valores
+  `standard` / `enterprise` / `enterprisePlus` e `0` / `1` / `3` anos. O padrão já vem
+  **Enterprise com 1 ano**. Marcar o input com `check({force:true})` não muda nada; é preciso
+  clicar no elemento pai visível (ao contrário do Compute Engine, onde o pai não funciona).
+
+### Dataproc: duas variantes, rótulos repetidos e um nome novo
+
+- `Service type` tem `Dataproc Serverless for Spark` (padrão) e `Dataproc on GCE/GKE`. O nome traz
+  a barra: `/on GKE/` não casa, use `/GCE.GKE/i`.
+- Na variante GCE/GKE, `Machine Family`, `Series` e `Machine type` aparecem duas vezes, para o
+  master e para o worker, com nome acessível idêntico. `setSelect` pega sempre o primeiro e deixa
+  o worker em `n1-standard-4`, sem aviso. Enderece pela ordem de ocorrência
+  (`getByRole('combobox', {name}).nth(1)` para o worker). Os dropdowns de SSD local, ao contrário,
+  se distinguem pelo rótulo (`per Master Node` / `per Worker Node`).
+- Só a variante GCE/GKE expõe workers spot, SSD local e desconto de uso comprometido.
+- **No modal de busca o produto virou `Managed Service for Apache Spark`**, mas a grade do
+  catálogo ainda mostra `Dataproc`. `addProduto(page, 'Dataproc')` falha sempre com "produto não
+  encontrado" e o build segue sem o serviço, com total plausível. Quando um nome do catálogo
+  falhar, sonde o modal em vez de confiar só em `catalogo_gcp.json`, e procure `ERRO:` no log.
+- **A variante serverless perdeu o dropdown `Period`**: `Usage time` passou a ser horas **por
+  mês**. Um filler antigo (`Unit` Hours, `Period` Day, 8) grava 8 h/mês, e o item sai por
+  US$ 4,37 em vez de cerca de US$ 131. Preencha já multiplicado pelos dias (8 x 30 = 240).
+
+### Cloud SQL: sem alta disponibilidade, e a licença pesa mais que a máquina
+
+Os radios do formulário são só a edição (`enterprise` / `enterprisePlus`) e o disco
+(`ssd` / `hdd`); não há opção de HA. Para espelhar um RDS Multi-AZ, dobre as instâncias (primária
+e standby são cobradas) e some o storage das duas cópias. **SQL Server tem dropdown
+`License type`** (Express, Web, Standard, Enterprise; padrão Standard): 2x `db-standard-2` com
+600 GiB cada em us-east4 custam US$ 1.188,67 em SQL Server contra US$ 429,47 em MySQL. Modelar um
+SQL Server como MySQL tira cerca de US$ 380 por instância de 2 vCPU, sem aviso.
+
+### Networking: rótulo por substring casa o campo errado
+
+`fillMany` casa rótulo por substring, e "Amount of data" também casa "Amount of data processed"
+do Cloud NAT. Com um NAT e dois itens de Data Transfer na mesma estimativa, o valor foi para o
+campo errado e o egress saiu por US$ 339 em vez de US$ 194. Para Data Transfer, case o rótulo
+exato (`/^Amount of data( info)?$/`). O formulário tem dois blocos com rótulos repetidos: o
+primeiro (`Unit` TiB, origem e destino por continente) é egress para a internet; o segundo
+(`Unit` PiB, por região) é tráfego entre regiões Google. Referência: 61 TiB de us-east4 para North
+America = US$ 5.314,56.
+
+O `Networking` não tem Private Service Connect: só IP Address, Data Transfer, NAT Gateway (radios
+`public-nat` / `private-nat`) e Cloud Load Balancing.
+
 ### BigQuery tem On-Demand além de Editions
 
 Editions começa em 100 slots baseline (cerca de US$ 2 mil/mês) e fica duas ordens de grandeza acima
@@ -179,8 +305,16 @@ link estava íntegro; o que estava errado era o conteúdo dele.
 | Kafka gerenciado | `Managed Service for Apache Kafka` |
 | Discos (PD / Hyperdisk) | `Hyperdisk and Persistent Disk` |
 | VPC, balanceador, NAT | `Networking` |
+| Dataproc | `Managed Service for Apache Spark` (no modal de busca) |
 
 Não existem no catálogo, e precisam ser estimados por fora: Datastream, Data Fusion, Looker e
 Looker Studio Pro, Cloud Scheduler, Eventarc, Identity-Aware Proxy, Cloud IAM.
 
 A lista completa está em `catalogo_gcp.json`; regenere com `node list_catalogo.mjs`.
+
+### Databricks no GCP em São Paulo não tem serverless
+
+Não é do calculator, mas decide a região de qualquer cenário Databricks no GCP: em
+`southamerica-east1` faltam serverless (SQL warehouses, jobs, pipelines), Lakeflow Connect, Model
+Serving e Genie (docs.databricks.com/gcp/en/resources/feature-region-support, set/2026). Os DBUs
+não existem no catálogo do calculator; some por fora.
